@@ -19,9 +19,11 @@ fn main() {
 
     println!("Your name is {} {}", first_name, last_name);
 
-    let vec = vec!["the man", "big-dawg", "cock-sucker"];
+    //improve the list
+    let vec = vec!["superstar", "big-dawg", "money-maker"];
 
     let n_name = rand::thread_rng().choose(&vec);
 
+    //need to fix "n_name"
     println!("Your new name is {} '{:?}' {}", first_name, n_name, last_name);
 }
