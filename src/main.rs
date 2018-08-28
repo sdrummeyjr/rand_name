@@ -12,6 +12,8 @@ fn main() {
     io::stdin().read_line(&mut first_name)
         .expect("failed to read line");
     
+    println!("What's your last name?");
+
     let mut last_name = String::new();
 
     io::stdin().read_line(&mut last_name)
@@ -19,9 +21,9 @@ fn main() {
 
     println!("Your name is {} {}", first_name, last_name);
 
-    let vec = vec!["the man", "big-dawg", "cock-sucker"];
+    let vec = vec!["the man", "big-dawg", "awesome-sox"];
 
-    let n_name = rand::thread_rng().choose(&vec);
+    let n_name = rand::thread_rng().choose(&vec).unwrap();
 
-    println!("Your new name is {} '{:?}' {}", first_name, n_name, last_name);
+    println!("Your new name is {} {:?} {}", first_name, n_name, last_name);
 }
